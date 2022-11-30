@@ -5,11 +5,12 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  padding: 0 2rem;
 }
 
 h1 {
   color: var(--primary-text-color);
-  font-size: 5.5rem;
+  font-size: calc(85px + 0.390625vw);
   font-weight: 700;
   word-break: break-word;
   margin: 0;
@@ -17,7 +18,7 @@ h1 {
 
 p {
   color: var(--secondary-text-color);
-  font-size: 20px;
+  font-size: calc(16px + 0.390625vw);
   margin: 0;
 }
 
