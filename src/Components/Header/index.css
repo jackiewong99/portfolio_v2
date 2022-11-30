@@ -23,6 +23,6 @@ p {
 }
 
 .caption {
-  width: clamp(32ch, 50%, 46ch);
+  width: clamp(32ch, 50%, 40ch);
   margin-top: 15px;
 }
