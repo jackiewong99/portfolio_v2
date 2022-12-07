@@ -1,6 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+// Styling and animation
 import './index.css';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
