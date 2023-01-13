@@ -1,0 +1,116 @@
+/* About Component styling */
+.about {
+  --primary-text-color: #5c8d89;
+  --secondary-text-color: #80b5a0;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.aboutHeader {
+  font-size: calc(60px + 0.390625vw);
+  color: var(--primary-text-color);
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 2rem;
+}
+
+/* AboutDetail styling */
+.flexChildDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail {
+  color: var(--secondary-text-color);
+  font-size: calc(14px + 0.390625vw);
+  width: clamp(32ch, 50%, 40ch);
+  text-align: left;
+  margin: 10px 0;
+}
+
+.skillsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, max-content));
+  gap: 5px 10px;
+  align-self: flex-start;
+  overflow: hidden;
+  padding-right: 0.5rem;
+  margin: 10px 0 0 0;
+  color: var(--primary-text-color);
+  font-size: calc(9px + 0.390625vw);
+  list-style: none;
+}
+
+.skill {
+  margin: 0 0 10px 0;
+}
+
+.skill:before {
+  content: '❯';
+  color: var(--primary-text-color);
+  margin-right: 5px;
+}
+
+/* AboutImage styling  */
+.flexChildImage {
+  z-index: 1;
+}
+
+.img {
+  border-radius: 50%;
+  max-width: 300px;
+  height: 300px;
+}
+
+.flexChildImage::before {
+  content: '';
+  background-color: var(--secondary-text-color);
+  border-radius: 50%;
+  opacity: 0.6;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform: translateX(-5rem) translateY(1.25rem);
+  z-index: -1;
+}
+
+/* Screen size breakpoints */
+@media screen and (max-width: 930px) {
+  .flexChildImage::before {
+    transform: translateX(-3rem) translateY(1.25rem);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .flexChildImage::before {
+    transform: translateX(-2rem) translateY(1.25rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flexChildImage::before {
+    transform: translateX(-1.25rem) translateY(1.25rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skillsList {
+    align-self: center;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 430px) {
+  .flexChildImage::before {
+    transform: translateX(-2rem) translateY(1.25rem);
+  }
+}
