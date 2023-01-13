@@ -1,12 +1,12 @@
 import React from 'react';
 // Styling and animation
-import './index.css';
+import styles from './Header.module.css';
 import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
     <motion.div
-      className='header'
+      className={styles.header}
       transition={{ staggerChildren: 0.05, delayChildren: 0.2 }}
     >
       <motion.div
@@ -14,7 +14,7 @@ const Header = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: 'easeInOut', type: 'spring' }}
       >
-        <p>Hello, my name is</p>
+        <p className={styles.caption}>Hello, my name is</p>
         <h1>Jackie Wong.</h1>
       </motion.div>
       <motion.div
@@ -28,7 +28,7 @@ const Header = () => {
         }}
       >
         <h1>I build projects for the web.</h1>
-        <p className='caption'>
+        <p className={styles.caption}>
           I am a self-taught web developer based in Honolulu, HI specializing in
           building modern websites, web apps, and all else on the web.
         </p>

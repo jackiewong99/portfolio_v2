@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   text-align: left;
   padding: 0 2rem;
+  min-height: 100vh;
 }
 
 h1 {
@@ -16,9 +18,9 @@ h1 {
   margin: 0;
 }
 
-p {
+.caption {
   color: var(--secondary-text-color);
-  font-size: calc(16px + 0.390625vw);
+  font-size: calc(14px + 0.390625vw);
   margin: 0;
 }
 
