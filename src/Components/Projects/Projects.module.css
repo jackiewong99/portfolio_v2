@@ -1,0 +1,15 @@
+.projects {
+  --header-text-color: #5c8d89;
+  --primary-color: #ddfddb;
+  --secondary-color: #12714d;
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+
+.projectsHeader {
+  color: var(--header-text-color);
+  font-size: calc(60px + 0.390625vw);
+  text-align: center;
+}
