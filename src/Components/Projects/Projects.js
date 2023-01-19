@@ -10,7 +10,17 @@ const Projects = () => {
         <h1 className={styles.projectsHeader}>Projects</h1>
       </header>
       <section>
-        <ProjectCard />
+        <ul className={styles.projectsGrid}>
+          <li>
+            <ProjectCard />
+          </li>
+          <li>
+            <ProjectCard />
+          </li>
+          <li>
+            <ProjectCard />
+          </li>
+        </ul>
       </section>
     </div>
   );
