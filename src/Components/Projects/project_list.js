@@ -22,7 +22,7 @@ export const projectList = [
   },
   {
     title: 'Form Validation',
-    description: `Project that practices the validation of common form fields' data input. This project was my first experience using Vue JS (fun fact: this portfolio website is also built with Vue JS).`,
+    description: `Project that practices the validation of common form fields' data input. This project was my first experience building with Vue JS.`,
     website: `https://form-validation-29df6.web.app`,
     github_repo: `https://github.com/jackiewong99/form-validation`,
     tech_list: ['Vue.js', 'Firebase', 'CSS'],
