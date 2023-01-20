@@ -4,6 +4,10 @@ import { Folder, GitHub } from 'react-feather';
 // Styling
 import styles from './Projects.module.css';
 
+const openInNewTab = url => {
+  window.open(url, '_blank', 'noreferrer');
+};
+
 const ProjectCard = ({
   title,
   description,
@@ -12,7 +16,10 @@ const ProjectCard = ({
   tech_list,
 }) => {
   return (
-    <div className={styles.cardContainer}>
+    <div
+      className={styles.cardContainer}
+      onClick={() => openInNewTab(website !== '' ? website : github_repo)}
+    >
       <header>
         <div className={styles.cardIcons}>
           <div>
