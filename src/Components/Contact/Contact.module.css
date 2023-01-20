@@ -1,0 +1,11 @@
+.contact {
+  --primary-color: #5c8d89;
+  min-height: 50vh;
+  padding: 100px 0;
+}
+
+.contactHeader {
+  color: var(--primary-color);
+  font-size: calc(60px + 0.390625vw);
+  text-align: center;
+}

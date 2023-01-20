@@ -1,10 +1,12 @@
 import React from 'react';
+// Styling
+import styles from './Contact.module.css';
 
 const Contact = () => {
   return (
-    <div>
+    <div className={styles.contact}>
       <header>
-        <h1>Interested?</h1>
+        <h1 className={styles.contactHeader}>Interested?</h1>
       </header>
     </div>
   );
