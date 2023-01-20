@@ -17,7 +17,7 @@ const ProjectCard = ({
         <div className={styles.cardIcons}>
           <div>
             <a
-              href={website != '' ? website : github_repo}
+              href={website !== '' ? website : github_repo}
               target='_blank'
               rel='noreferrer'
               className={styles.cardLink}
