@@ -30,6 +30,7 @@
 
 /* ProjectCard styling */
 .cardContainer {
+  box-shadow: 0 10px 15px -10px rgb(128, 181, 160, 0.6);
   background-color: var(--primary-color);
   border-radius: 8px;
   display: flex;
@@ -39,6 +40,11 @@
   height: 100%;
   padding: 1rem;
   overflow: auto;
+  transition: all 0.2s ease-out;
+}
+
+.cardContainer:hover {
+  transform: translateY(-5px);
 }
 
 .cardIcons {
@@ -49,6 +55,11 @@
 
 .cardLink {
   text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+
+.cardLink:hover {
+  opacity: 0.5;
 }
 
 .cardTitle {
