@@ -36,7 +36,14 @@ const ProjectCard = ({
             </a>
           </div>
         </div>
-        <h2 className={styles.cardTitle}>{title}</h2>
+        <a
+          href={website !== '' ? website : github_repo}
+          target='_blank'
+          rel='noreferrer'
+          className={styles.cardLink}
+        >
+          <h2 className={styles.cardTitle}>{title}</h2>
+        </a>
         <div className={styles.cardDescription}>{description}</div>
       </header>
       <footer>
