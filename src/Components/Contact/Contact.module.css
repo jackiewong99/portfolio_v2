@@ -1,6 +1,7 @@
 .contact {
   --primary-color: #5c8d89;
   --secondary-color: #80b5a0;
+  --text-font-size: calc(11px + 0.390625vw);
   max-width: 550px;
   min-height: 50vh;
   padding: 100px 0;
@@ -24,8 +25,9 @@
 }
 
 .contactText {
-  font-size: calc(11px + 0.390625vw);
+  font-size: var(--text-font-size);
   text-align: center;
+  padding: 0 3rem;
 }
 
 .contactBtn {
@@ -33,6 +35,19 @@
   border: 3px solid #6da28e;
   border-radius: 6px;
   outline: none;
+  font-size: var(--text-font-size);
+  margin-top: 25px;
   padding: 20px 30px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.contactBtn:hover {
+  background-color: rgba(236, 236, 211, 0.6);
+  opacity: 0.6;
+}
+
+.contactBtn:active {
+  background-color: rgba(236, 236, 211, 0.3);
+  opacity: 0.3;
 }
