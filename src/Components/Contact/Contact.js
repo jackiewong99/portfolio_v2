@@ -11,7 +11,7 @@ const Contact = () => {
         <div className={styles.contactFooter}>
           <p className={styles.contactText}>
             I'm always looking for new opportunities and my inbox is always open
-            to any messages. I will get back to any inquiries, questions, or any
+            to any messages. I will get back to inquiries, questions, or any
             other messages as soon as possible!
           </p>
           <button className={styles.contactBtn}>Get in Touch</button>
