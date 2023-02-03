@@ -5,7 +5,7 @@ import styles from './Contact.module.css';
 
 const dropIn = {
   hidden: {
-    y: '-30vh',
+    y: '-15vh',
     opactiy: 0,
   },
   visible: {
@@ -40,7 +40,23 @@ const Modal = ({ handleClose }) => {
           I am open to new opportunities and so is my inbox! I will get back to
           your message as soon as possible.
         </p>
-        <button onClick={handleClose}>Send</button>
+        <form>
+          <label>Name</label>
+          <input type='text' required />
+          <label>Email</label>
+          <input type='email' autoComplete='on' required />
+          <label>Subject</label>
+          <input type='text' required />
+          <label>Message</label>
+          <textarea
+            type='message'
+            cols='60'
+            rows='15'
+            placeholder='Hello!'
+            required
+          />
+          <button type='submit'>Send</button>
+        </form>
       </motion.div>
     </Backdrop>
   );
