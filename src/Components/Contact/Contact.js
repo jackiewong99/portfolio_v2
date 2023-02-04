@@ -4,7 +4,7 @@ import Modal from './Modal';
 import useModal from '../../hooks/useModal';
 // Styling and animations
 import styles from './Contact.module.css';
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
   const { modalOpen, open, close } = useModal();
