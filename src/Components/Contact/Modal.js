@@ -48,13 +48,7 @@ const Modal = ({ handleClose }) => {
           <label>Subject</label>
           <input type='text' required />
           <label>Message</label>
-          <textarea
-            type='message'
-            cols='60'
-            rows='15'
-            placeholder='Hello!'
-            required
-          />
+          <textarea type='message' rows='15' placeholder='Hello!' required />
           <button type='submit'>Send</button>
         </form>
       </motion.div>
