@@ -87,6 +87,31 @@
   font-size: var(--text-font-size);
 }
 
+label {
+  color: var(--modal-text-color);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  width: 100%;
+}
+
 textarea {
   resize: none;
+}
+
+form button {
+  margin-top: 10px;
 }
