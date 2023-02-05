@@ -19,7 +19,7 @@ const dropIn = {
     },
   },
   exit: {
-    y: '40vh',
+    y: '90vh',
     opacity: 0,
   },
 };
@@ -48,7 +48,7 @@ const Modal = ({ handleClose }) => {
           <label>Subject</label>
           <input type='text' required />
           <label>Message</label>
-          <textarea type='message' rows='15' placeholder='Hello!' required />
+          <textarea type='message' rows='12' placeholder='Hello!' required />
           <button type='submit'>Send</button>
         </form>
       </motion.div>
