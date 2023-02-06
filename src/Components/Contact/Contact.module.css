@@ -121,6 +121,18 @@ textarea {
   resize: none;
 }
 
-form button {
+.submitBtn {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
+}
+
+.submitBtn button {
+  background-color: #a7d7c5;
+  border: 3px solid var(--modal-text-color);
+  border-radius: 5px;
+  color: var(--modal-text-color);
+  font-size: var(--text-font-size);
+  padding: 1.25rem 3rem;
+  cursor: pointer;
 }
