@@ -33,6 +33,7 @@ const Modal = ({ handleClose }) => {
     subject: '',
     message: '',
   });
+  const [submitStatus, setSubmitStatus] = useState(false);
 
   const handleInputChange = e => {
     const inputName = e.target.name;
@@ -59,7 +60,25 @@ const Modal = ({ handleClose }) => {
     }
   };
 
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join('&');
+  };
+
   const handleSubmit = e => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...form }),
+    })
+      .then(() => {
+        setSubmitStatus(true);
+      })
+      .catch(() => {
+        setSubmitStatus(false);
+      });
+
     e.preventDefault();
   };
 
