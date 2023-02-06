@@ -3,7 +3,7 @@ import Backdrop from './Backdrop';
 import { X } from 'react-feather';
 // Styling and animation
 import styles from './Contact.module.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const dropIn = {
   hidden: {
@@ -168,6 +168,17 @@ const Modal = ({ handleClose }) => {
             </motion.button>
           </div>
         </form>
+        <AnimatePresence>
+          {submitStatus ? (
+            <div>
+              Thank you for your interest, I will respond as soon as possible!
+            </div>
+          ) : (
+            <div>
+              Oops! Looks like something went wrong, try refreshing the page.
+            </div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </Backdrop>
   );
