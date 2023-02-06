@@ -1,4 +1,5 @@
 import Backdrop from './Backdrop';
+import { X } from 'react-feather';
 // Styling and animation
 import styles from './Contact.module.css';
 import { motion } from 'framer-motion';
@@ -35,7 +36,15 @@ const Modal = ({ handleClose }) => {
         animate='visible'
         exit='exit'
       >
-        <h2>Get in Touch</h2>
+        <div className={styles.modalHeader}>
+          <h2>Get in Touch</h2>
+          <X
+            className={styles.modalCloseBtn}
+            color={`#275854`}
+            size={28}
+            onClick={handleClose}
+          />
+        </div>
         <p>
           I am open to new opportunities and so is my inbox! I will get back to
           your message as soon as possible.
