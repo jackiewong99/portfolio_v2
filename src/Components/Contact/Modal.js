@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Backdrop from './Backdrop';
 import { X } from 'react-feather';
 // Styling and animation
@@ -26,6 +27,42 @@ const dropIn = {
 };
 
 const Modal = ({ handleClose }) => {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleInputChange = e => {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    switch (inputName) {
+      case 'name':
+        setForm({ ...form, name: inputValue });
+        break;
+
+      case 'email':
+        setForm({ ...form, email: inputValue });
+        break;
+
+      case 'subject':
+        setForm({ ...form, subject: inputValue });
+        break;
+
+      case 'message':
+        setForm({ ...form, message: inputValue });
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -49,15 +86,49 @@ const Modal = ({ handleClose }) => {
           I am open to new opportunities and so is my inbox! I will get back to
           your message as soon as possible.
         </p>
-        <form>
+        <form
+          name='contact'
+          method='post'
+          data-netlify='true'
+          data-netlify-honeypot='bot-field'
+          onSubmit={handleSubmit}
+        >
+          <input type='hidden' name='form-name' value='contact' />
           <label>Name</label>
-          <input type='text' required />
+          <input
+            type='text'
+            name='name'
+            value={form.name}
+            onChange={handleInputChange}
+            required
+          />
           <label>Email</label>
-          <input type='email' autoComplete='on' required />
+          <input
+            type='email'
+            name='email'
+            value={form.email}
+            onChange={handleInputChange}
+            autoComplete='on'
+            required
+          />
           <label>Subject</label>
-          <input type='text' required />
+          <input
+            type='text'
+            name='subject'
+            value={form.subject}
+            onChange={handleInputChange}
+            required
+          />
           <label>Message</label>
-          <textarea type='message' rows='12' placeholder='Hello!' required />
+          <textarea
+            type='message'
+            name='message'
+            value={form.message}
+            onChange={handleInputChange}
+            rows='12'
+            placeholder='Hello!'
+            required
+          />
           <div className={styles.submitBtn}>
             <motion.button
               type='submit'
