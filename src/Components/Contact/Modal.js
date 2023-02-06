@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
 import Backdrop from './Backdrop';
-// Styling
+// Styling and animation
 import styles from './Contact.module.css';
+import { motion } from 'framer-motion';
 
 const dropIn = {
   hidden: {
@@ -49,7 +49,25 @@ const Modal = ({ handleClose }) => {
           <input type='text' required />
           <label>Message</label>
           <textarea type='message' rows='12' placeholder='Hello!' required />
-          <button type='submit'>Send</button>
+          <div className={styles.submitBtn}>
+            <motion.button
+              type='submit'
+              whileHover={{
+                backgroundColor: 'rgba(236, 236, 211, 0.6)',
+                opacity: 0.6,
+              }}
+              whileTap={{
+                backgroundColor: 'rgba(236, 236, 211, 0.3)',
+                borderColor: 'rgb(54, 125, 119)',
+                opacity: 0.3,
+              }}
+              transition={{
+                duration: 0.3,
+              }}
+            >
+              Send
+            </motion.button>
+          </div>
         </form>
       </motion.div>
     </Backdrop>
