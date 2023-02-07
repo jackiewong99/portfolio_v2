@@ -73,9 +73,10 @@
 .modalContainer {
   background-color: #a7d7c5;
   border-radius: 10px;
+  box-sizing: border-box;
   margin: 1rem;
-  padding: 1rem 2rem;
-  max-width: 800px;
+  padding: 1rem 2.25rem;
+  width: 75%;
 }
 
 .modalContainer h2,
@@ -138,7 +139,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: var(--secondary-color);
+  border-color: var(--modal-text-color);
 }
 
 textarea {
@@ -159,4 +160,15 @@ textarea {
   font-size: var(--text-font-size);
   padding: 1.25rem 3rem;
   cursor: pointer;
+}
+
+.successMsg,
+.errorMsg {
+  border-radius: 5px;
+}
+
+.successMsg {
+  background-color: #1ea370b1;
+  color: #fdfdf8;
+  padding: 1rem;
 }
