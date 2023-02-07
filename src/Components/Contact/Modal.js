@@ -33,7 +33,8 @@ const Modal = ({ handleClose }) => {
     subject: '',
     message: '',
   });
-  const [submitStatus, setSubmitStatus] = useState(false);
+
+  const [submitStatus, setSubmitStatus] = useState(undefined);
 
   const handleInputChange = e => {
     const inputName = e.target.name;
@@ -66,18 +67,30 @@ const Modal = ({ handleClose }) => {
       .join('&');
   };
 
+  //   const handleSubmit = e => {
+  //     fetch('/', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //       body: encode({ 'form-name': 'contact', ...form }),
+  //     })
+  //       .then(() => {
+  //         setSubmitStatus(true);
+  //       })
+  //       .catch(() => {
+  //         setSubmitStatus(false);
+  //       });
+
+  //     e.preventDefault();
+  //   };
+
   const handleSubmit = e => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...form }),
-    })
-      .then(() => {
-        setSubmitStatus(true);
-      })
-      .catch(() => {
-        setSubmitStatus(false);
-      });
+    setSubmitStatus(true);
+    setForm({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
 
     e.preventDefault();
   };
@@ -101,84 +114,82 @@ const Modal = ({ handleClose }) => {
             onClick={handleClose}
           />
         </div>
-        <p>
-          I am open to new opportunities and so is my inbox! I will get back to
-          your message as soon as possible.
-        </p>
-        <form
-          name='contact'
-          method='post'
-          data-netlify='true'
-          data-netlify-honeypot='bot-field'
-          onSubmit={handleSubmit}
-        >
-          <input type='hidden' name='form-name' value='contact' />
-          <label>Name</label>
-          <input
-            type='text'
-            name='name'
-            value={form.name}
-            onChange={handleInputChange}
-            required
-          />
-          <label>Email</label>
-          <input
-            type='email'
-            name='email'
-            value={form.email}
-            onChange={handleInputChange}
-            autoComplete='on'
-            required
-          />
-          <label>Subject</label>
-          <input
-            type='text'
-            name='subject'
-            value={form.subject}
-            onChange={handleInputChange}
-            required
-          />
-          <label>Message</label>
-          <textarea
-            type='message'
-            name='message'
-            value={form.message}
-            onChange={handleInputChange}
-            rows='12'
-            placeholder='Hello!'
-            required
-          />
-          <div className={styles.submitBtn}>
-            <motion.button
-              type='submit'
-              whileHover={{
-                backgroundColor: 'rgba(236, 236, 211, 0.6)',
-                opacity: 0.6,
-              }}
-              whileTap={{
-                backgroundColor: 'rgba(236, 236, 211, 0.3)',
-                borderColor: 'rgb(54, 125, 119)',
-                opacity: 0.3,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-            >
-              Send
-            </motion.button>
-          </div>
-        </form>
-        <AnimatePresence>
-          {submitStatus ? (
-            <div>
-              Thank you for your interest, I will respond as soon as possible!
+        {submitStatus && (
+          <motion.div className={styles.successMsg}>
+            Thank you for your interest, I will get in touch as soon as
+            possible!
+          </motion.div>
+        )}
+        {submitStatus === false && (
+          <motion.div className={styles.errorMsg}>
+            Oops! Looks like something went wrong, try refreshing the page.
+          </motion.div>
+        )}
+        <div>
+          <form
+            name='contact'
+            method='post'
+            data-netlify='true'
+            data-netlify-honeypot='bot-field'
+            onSubmit={handleSubmit}
+          >
+            <input type='hidden' name='form-name' value='contact' />
+            <label>Name</label>
+            <input
+              type='text'
+              name='name'
+              value={form.name}
+              onChange={handleInputChange}
+              required
+            />
+            <label>Email</label>
+            <input
+              type='email'
+              name='email'
+              value={form.email}
+              onChange={handleInputChange}
+              autoComplete='on'
+              required
+            />
+            <label>Subject</label>
+            <input
+              type='text'
+              name='subject'
+              value={form.subject}
+              onChange={handleInputChange}
+              required
+            />
+            <label>Message</label>
+            <textarea
+              type='message'
+              name='message'
+              value={form.message}
+              onChange={handleInputChange}
+              rows='12'
+              placeholder='Hello!'
+              required
+            />
+            <div className={styles.submitBtn}>
+              <motion.button
+                type='submit'
+                whileHover={{
+                  backgroundColor: 'rgba(236, 236, 211, 0.6)',
+                  opacity: 0.6,
+                }}
+                whileTap={{
+                  backgroundColor: 'rgba(236, 236, 211, 0.3)',
+                  borderColor: 'rgb(54, 125, 119)',
+                  opacity: 0.3,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
+              >
+                Send
+              </motion.button>
             </div>
-          ) : (
-            <div>
-              Oops! Looks like something went wrong, try refreshing the page.
-            </div>
-          )}
-        </AnimatePresence>
+          </form>
+        </div>
       </motion.div>
     </Backdrop>
   );
