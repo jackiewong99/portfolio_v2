@@ -3,7 +3,7 @@ import Backdrop from './Backdrop';
 import { X } from 'react-feather';
 // Styling and animation
 import styles from './Contact.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const dropIn = {
   hidden: {
