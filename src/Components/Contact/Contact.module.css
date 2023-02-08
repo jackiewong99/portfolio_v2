@@ -165,10 +165,14 @@ textarea {
 .successMsg,
 .errorMsg {
   border-radius: 5px;
+  color: #fdfdf8;
+  padding: 1rem;
 }
 
 .successMsg {
   background-color: #1ea370b1;
-  color: #fdfdf8;
-  padding: 1rem;
+}
+
+.errorMsg {
+  background-color: rgb(222, 60, 60);
 }
