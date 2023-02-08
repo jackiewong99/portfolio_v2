@@ -26,6 +26,27 @@ const dropIn = {
   },
 };
 
+const msgDropIn = {
+  hidden: {
+    y: '30px',
+    opacity: 0,
+  },
+  visible: {
+    y: '0',
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      type: 'spring',
+      damping: 30,
+      stiffness: 300,
+    },
+  },
+  exit: {
+    y: '30px',
+    opacity: 0,
+  },
+};
+
 const Modal = ({ handleClose }) => {
   const [form, setForm] = useState({
     name: '',
@@ -67,30 +88,30 @@ const Modal = ({ handleClose }) => {
       .join('&');
   };
 
-  //   const handleSubmit = e => {
-  //     fetch('/', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //       body: encode({ 'form-name': 'contact', ...form }),
-  //     })
-  //       .then(() => {
-  //         setSubmitStatus(true);
-  //       })
-  //       .catch(() => {
-  //         setSubmitStatus(false);
-  //       });
-
-  //     e.preventDefault();
-  //   };
-
   const handleSubmit = e => {
-    setSubmitStatus(true);
-    setForm({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...form }),
+    })
+      .then(() => {
+        setSubmitStatus(true);
+        setForm({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      })
+      .catch(() => {
+        setSubmitStatus(false);
+        setForm({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      });
 
     e.preventDefault();
   };
@@ -115,13 +136,25 @@ const Modal = ({ handleClose }) => {
           />
         </div>
         {submitStatus && (
-          <motion.div className={styles.successMsg}>
+          <motion.div
+            className={styles.successMsg}
+            variants={msgDropIn}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+          >
             Thank you for your interest, I will get in touch as soon as
             possible!
           </motion.div>
         )}
         {submitStatus === false && (
-          <motion.div className={styles.errorMsg}>
+          <motion.div
+            className={styles.errorMsg}
+            variants={msgDropIn}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+          >
             Oops! Looks like something went wrong, try refreshing the page.
           </motion.div>
         )}
