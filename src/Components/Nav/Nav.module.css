@@ -1,0 +1,32 @@
+nav {
+  background: #a7d7c5;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.navHeader {
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+.navHeader,
+.navLinks li .navLink {
+  color: #5c8d89;
+  font-weight: 700;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 50%;
+}
+
+.navLinks li .navLink {
+  text-decoration: none;
+}
