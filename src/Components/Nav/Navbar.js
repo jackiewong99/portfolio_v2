@@ -1,8 +1,8 @@
 import styles from './Nav.module.css';
 
-const Nav = () => {
+const Navbar = () => {
   return (
-    <nav>
+    <nav className={styles.navbarContainer}>
       <header className={styles.navHeader}>JACKIE WONG</header>
       <ul className={styles.navLinks}>
         <li>
@@ -25,4 +25,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navbar;
