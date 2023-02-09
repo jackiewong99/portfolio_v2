@@ -19,6 +19,7 @@
 .navToggleBtn {
   outline: none;
   border: none;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   cursor: pointer;
