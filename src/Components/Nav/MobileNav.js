@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 100}px at right top)`,
+    clipPath: `circle(${height * 1.5 + 100}px at right top)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -19,7 +19,7 @@ const sidebar = {
     transition: {
       delay: 0.3,
       type: 'spring',
-      stiffness: 200,
+      stiffness: 400,
       damping: 40,
     },
   },
