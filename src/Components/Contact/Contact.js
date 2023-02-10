@@ -10,7 +10,7 @@ const Contact = () => {
   const { modalOpen, open, close } = useModal();
 
   return (
-    <div className={styles.contact}>
+    <div name='contact' className={styles.contact}>
       <header>
         <h1 className={styles.contactHeader}>Say Hi</h1>
       </header>

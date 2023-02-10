@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <div className={styles.about}>
+    <div name='about' className={styles.about}>
       <header>
         <h1 className={styles.aboutHeader}>About Me</h1>
       </header>
