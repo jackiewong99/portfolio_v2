@@ -1,5 +1,6 @@
-import styles from './MobileNav.module.css';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
+import styles from './MobileNav.module.css';
 
 const variants = {
   open: {
@@ -18,7 +19,7 @@ const variants = {
   },
 };
 
-const NavItem = ({ name }) => {
+const NavItem = ({ name, url }) => {
   return (
     <motion.li
       className={styles.mobileNavItem}
@@ -26,7 +27,9 @@ const NavItem = ({ name }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <p>{name}</p>
+      <Link to={url} spy={true} smooth={true} duration={500}>
+        {name}
+      </Link>
     </motion.li>
   );
 };
