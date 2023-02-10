@@ -7,7 +7,7 @@ import { projectList } from './project_list';
 
 const Projects = () => {
   return (
-    <div className={styles.projects}>
+    <div name='projects' className={styles.projects}>
       <header>
         <h1 className={styles.projectsHeader}>Projects</h1>
       </header>
