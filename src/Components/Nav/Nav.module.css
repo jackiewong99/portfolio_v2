@@ -8,6 +8,7 @@
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 .navHeader {
@@ -30,4 +31,8 @@
 
 .navLinks li .navLink {
   text-decoration: none;
+}
+
+.active {
+  color: #68b0ab;
 }

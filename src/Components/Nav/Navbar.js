@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+import { navLabels } from './nav_labels';
 import styles from './Nav.module.css';
 
 const Navbar = () => {
@@ -5,21 +7,21 @@ const Navbar = () => {
     <nav className={styles.navbarContainer}>
       <header className={styles.navHeader}>JACKIE WONG</header>
       <ul className={styles.navLinks}>
-        <li>
-          <a href='#' className={styles.navLink}>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href='#' className={styles.navLink}>
-            About
-          </a>
-        </li>
-        <li>
-          <a href='#' className={styles.navLink}>
-            Contact
-          </a>
-        </li>
+        {navLabels.map((label, key) => (
+          <li>
+            <Link
+              key={key}
+              activeClass={styles.active}
+              to={label.url}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className={styles.navLink}
+            >
+              {label.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
