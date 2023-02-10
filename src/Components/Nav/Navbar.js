@@ -5,12 +5,15 @@ import styles from './Nav.module.css';
 const Navbar = () => {
   return (
     <nav className={styles.navbarContainer}>
-      <header className={styles.navHeader}>JACKIE WONG</header>
+      <header>
+        <a href='/' className={styles.navHeader}>
+          JACKIE WONG
+        </a>
+      </header>
       <ul className={styles.navLinks}>
         {navLabels.map((label, key) => (
-          <li>
+          <li key={key}>
             <Link
-              key={key}
               activeClass={styles.active}
               to={label.url}
               spy={true}
