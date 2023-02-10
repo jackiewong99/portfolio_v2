@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import resume from '../../assets/Jackie_Wong_Resume.pdf';
 import styles from './MobileNav.module.css';
 
 const variants = {
@@ -27,9 +28,20 @@ const NavItem = ({ name, url }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Link to={url} spy={true} smooth={true} duration={500}>
-        {name}
-      </Link>
+      {name !== 'RESUME' ? (
+        <Link to={url} spy={true} smooth={true} duration={500}>
+          {name}
+        </Link>
+      ) : (
+        <a
+          href={resume}
+          target='_blank'
+          rel='noreferrer'
+          className={styles.mobileNavResume}
+        >
+          {name}
+        </a>
+      )}
     </motion.li>
   );
 };

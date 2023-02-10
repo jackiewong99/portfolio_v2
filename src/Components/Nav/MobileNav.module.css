@@ -46,10 +46,19 @@
 }
 
 .mobileNavItem {
+  color: #5c8d89;
+  font-size: calc(16px + 0.390625vw);
+  font-weight: 700;
   list-style: none;
   margin-bottom: 20px;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.mobileNavResume {
+  color: #5c8d89;
+  text-decoration: none;
 }

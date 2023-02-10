@@ -11,19 +11,19 @@
   z-index: 2;
 }
 
-header {
+.navHeader {
   display: flex;
   align-items: center;
   padding-left: 3rem;
 }
 
-.navHeader {
+.navHeaderLink {
   font-size: 2rem;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-decoration: none;
 }
 
-.navHeader,
+.navHeaderLink,
 .navLinks li .navLink {
   color: #5c8d89;
   font-weight: 700;
@@ -37,6 +37,7 @@ header {
 }
 
 .navLinks li .navLink {
+  font-size: calc(13px + 0.390625vw);
   text-decoration: none;
 }
 
