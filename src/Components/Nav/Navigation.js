@@ -1,7 +1,7 @@
-import styles from './MobileNav.module.css';
 import { motion } from 'framer-motion';
 import { navLabels } from './nav_labels';
 import NavItem from './NavItem';
+import styles from './MobileNav.module.css';
 
 const variants = {
   open: {
@@ -16,7 +16,7 @@ const Navigation = () => {
   return (
     <motion.ul className={styles.mobileNavList} variants={variants}>
       {navLabels.map((label, key) => (
-        <NavItem name={label.name} key={key} />
+        <NavItem name={label.name} url={label.url} key={key} />
       ))}
     </motion.ul>
   );
