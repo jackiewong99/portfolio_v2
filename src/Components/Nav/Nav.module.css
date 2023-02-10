@@ -39,6 +39,7 @@
 .navLinks li .navLink {
   font-size: calc(13px + 0.390625vw);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .active {
