@@ -11,4 +11,8 @@ export const navLabels = [
     name: 'Contact',
     url: 'contact',
   },
+  {
+    name: 'RESUME',
+    url: '',
+  },
 ];
