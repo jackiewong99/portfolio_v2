@@ -25,23 +25,25 @@ const NavItem = ({ name, url, toggle }) => {
     <motion.li
       className={styles.mobileNavItem}
       variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ color: '#12714d', scale: 1.1 }}
+      whileTap={{ color: '#1eb178', scale: 0.95 }}
     >
       {name !== 'RESUME' ? (
         <Link to={url} spy={true} smooth={true} duration={500} onClick={toggle}>
           {name}
         </Link>
       ) : (
-        <a
+        <motion.a
           href={resume}
           target='_blank'
           rel='noreferrer'
           className={styles.mobileNavResume}
+          whileHover={{ color: '#12714d' }}
+          whileTap={{ color: '#1eb178' }}
           onClick={toggle}
         >
           {name}
-        </a>
+        </motion.a>
       )}
     </motion.li>
   );
