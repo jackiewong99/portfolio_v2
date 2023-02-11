@@ -39,7 +39,7 @@ const MobileNav = () => {
       ref={containerRef}
     >
       <motion.div className={styles.navSidebar} variants={sidebar}></motion.div>
-      <Navigation />
+      <Navigation toggle={() => toggleOpen()} />
       <NavToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

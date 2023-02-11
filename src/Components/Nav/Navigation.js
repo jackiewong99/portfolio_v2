@@ -12,11 +12,11 @@ const variants = {
   },
 };
 
-const Navigation = () => {
+const Navigation = ({ toggle }) => {
   return (
     <motion.ul className={styles.mobileNavList} variants={variants}>
       {navLabels.map((label, key) => (
-        <NavItem name={label.name} url={label.url} key={key} />
+        <NavItem name={label.name} url={label.url} toggle={toggle} key={key} />
       ))}
     </motion.ul>
   );
