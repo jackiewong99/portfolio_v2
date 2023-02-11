@@ -20,7 +20,7 @@ const variants = {
   },
 };
 
-const NavItem = ({ name, url }) => {
+const NavItem = ({ name, url, toggle }) => {
   return (
     <motion.li
       className={styles.mobileNavItem}
@@ -29,7 +29,7 @@ const NavItem = ({ name, url }) => {
       whileTap={{ scale: 0.95 }}
     >
       {name !== 'RESUME' ? (
-        <Link to={url} spy={true} smooth={true} duration={500}>
+        <Link to={url} spy={true} smooth={true} duration={500} onClick={toggle}>
           {name}
         </Link>
       ) : (
@@ -38,6 +38,7 @@ const NavItem = ({ name, url }) => {
           target='_blank'
           rel='noreferrer'
           className={styles.mobileNavResume}
+          onClick={toggle}
         >
           {name}
         </a>
