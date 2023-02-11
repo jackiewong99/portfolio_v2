@@ -24,7 +24,7 @@ const Navbar = () => {
       <ul className={styles.navLinks}>
         {navLabels.map((label, key) =>
           label.name !== 'RESUME' ? (
-            <li key={key} whileHover={{ color: '#12714d' }}>
+            <li key={key}>
               <Link
                 activeClass={styles.active}
                 to={label.url}
@@ -37,7 +37,7 @@ const Navbar = () => {
               </Link>
             </li>
           ) : (
-            <li>
+            <li key={key}>
               <a
                 href={resume}
                 target='_blank'
