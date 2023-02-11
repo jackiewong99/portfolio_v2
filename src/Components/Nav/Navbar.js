@@ -14,7 +14,7 @@ const Navbar = () => {
       <ul className={styles.navLinks}>
         {navLabels.map((label, key) =>
           label.name !== 'RESUME' ? (
-            <li key={key}>
+            <li key={key} whileHover={{ color: '#12714d' }}>
               <Link
                 activeClass={styles.active}
                 to={label.url}

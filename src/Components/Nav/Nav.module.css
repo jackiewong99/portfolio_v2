@@ -24,7 +24,7 @@
 }
 
 .navHeaderLink,
-.navLinks li .navLink {
+.navLink {
   color: #5c8d89;
   font-weight: 700;
 }
@@ -40,8 +40,14 @@
   font-size: calc(13px + 0.390625vw);
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.2s ease-in;
 }
 
+.navLink:hover,
 .active {
-  color: #68b0ab;
+  color: #12714d;
+}
+
+.navLink:active {
+  color: #1eb178;
 }
