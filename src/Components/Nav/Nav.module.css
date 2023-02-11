@@ -1,6 +1,5 @@
 /* Desktop Nav */
 .navbarContainer {
-  background: #a7d7c5;
   height: 10vh;
   width: 100%;
   display: flex;
@@ -9,6 +8,12 @@
   position: fixed;
   top: 0;
   z-index: 2;
+  transition: all 0.2s ease-in;
+}
+
+.navbarBg {
+  background: #a7d7c5;
+  box-shadow: 0px 2px 5px rgb(128, 181, 160, 0.6);
 }
 
 .navHeader {
@@ -18,7 +23,7 @@
 }
 
 .navHeaderLink {
-  font-size: 2rem;
+  font-size: calc(26px + 0.390625vw);
   letter-spacing: 3px;
   text-decoration: none;
 }
