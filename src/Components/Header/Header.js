@@ -3,30 +3,40 @@ import React from 'react';
 import styles from './Header.module.css';
 import { motion } from 'framer-motion';
 
+const parentVariants = {
+  initial: {
+    opactiy: 0,
+  },
+  animate: {
+    opactiy: 1,
+    transition: { staggerChildren: 0.5, delayChildren: 1.5 },
+  },
+};
+
+const childVariants = {
+  initial: {
+    opacity: 0,
+    y: 22,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 const Header = () => {
   return (
     <motion.div
       className={styles.header}
-      transition={{ staggerChildren: 0.05, delayChildren: 0.2 }}
+      variants={parentVariants}
+      initial='initial'
+      animate='animate'
     >
-      <motion.div
-        initial={{ opacity: 0, y: 22 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: 'easeInOut', type: 'spring' }}
-      >
+      <motion.div variants={childVariants}>
         <p className={styles.caption}>Hello, my name is</p>
         <h1>Jackie Wong.</h1>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.7,
-          ease: 'easeInOut',
-          type: 'spring',
-          delay: 0.4,
-        }}
-      >
+      <motion.div variants={childVariants}>
         <h1>I build projects for the web.</h1>
         <p className={styles.caption}>
           I am a self-taught web developer based in Honolulu, HI specializing in
