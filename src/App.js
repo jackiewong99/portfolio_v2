@@ -1,6 +1,5 @@
 // Components
 import Navbar from './Components/Nav/Navbar';
-import MobileNav from './Components/Nav/MobileNav';
 import Header from './Components/Header/Header';
 import About from './Components/About/About';
 import Projects from './Components/Projects/Projects';
