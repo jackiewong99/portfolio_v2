@@ -1,19 +1,22 @@
 /* Mobile Nav */
 .mobileNav {
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 83.6vw;
-  bottom: 0;
+  right: 0;
+  transform: translateX(50%);
   width: 300px;
 }
 
 .navSidebar {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
   background: #a7d7c5;
+  width: 300px;
+  height: 100vh;
+  transform: translateX(-50%);
 }
 
 .navToggleBtn {
@@ -24,8 +27,11 @@
   -moz-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 18px;
-  left: 236px;
+  top: 0;
+  left: 0;
+  transform: translate(130%, 40%);
+  /* top: 18px;
+  left: 236px; */
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -41,7 +47,10 @@
 .mobileNavList {
   padding: 25px;
   position: absolute;
-  top: 100px;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 40%);
+  /* top: 100px; */
   width: 230px;
 }
 

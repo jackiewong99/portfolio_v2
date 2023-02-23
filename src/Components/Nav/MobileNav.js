@@ -7,7 +7,7 @@ import Navigation from './Navigation';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 1.5 + 100}px at 260px 40px)`,
+    clipPath: `circle(${height * 1.5 + 100}px at 80% 5%)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -15,7 +15,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: 'circle(30px at 260px 40px)',
+    clipPath: 'circle(30px at 80% 5%)',
     transition: {
       delay: 0.2,
       type: 'spring',
@@ -39,8 +39,8 @@ const MobileNav = () => {
       ref={containerRef}
     >
       <motion.div className={styles.navSidebar} variants={sidebar}></motion.div>
-      <Navigation toggle={() => toggleOpen()} />
       <NavToggle toggle={() => toggleOpen()} />
+      <Navigation toggle={() => toggleOpen()} />
     </motion.nav>
   );
 };
