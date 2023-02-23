@@ -16,6 +16,10 @@
   box-shadow: 0px 2px 5px rgb(128, 181, 160, 0.6);
 }
 
+.mobileNavbarBg {
+  background: #fdfdf8;
+}
+
 .navbarVisible {
   top: 0;
 }
