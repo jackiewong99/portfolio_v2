@@ -41,6 +41,9 @@ const MobileNav = () => {
       <motion.div className={styles.navSidebar} variants={sidebar}></motion.div>
       <NavToggle toggle={() => toggleOpen()} />
       <Navigation toggle={() => toggleOpen()} />
+      {isOpen && (
+        <div className={styles.mobileNavOverlay} onClick={toggleOpen}></div>
+      )}
     </motion.nav>
   );
 };
