@@ -1,0 +1,32 @@
+.footer {
+  max-width: 500px;
+  min-height: 15vh;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #5c8d89;
+  margin: 0 1rem;
+  transition: all 0.2s ease-in;
+}
+
+.footerLink:hover {
+  opacity: 0.6;
+}
+
+.footerLink:active {
+  opacity: 0.3;
+}
+
+.footerText {
+  color: #5c8d89;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
