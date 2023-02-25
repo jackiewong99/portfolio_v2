@@ -5,16 +5,23 @@ import useModal from '../../hooks/useModal';
 // Styling and animations
 import styles from './Contact.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import { scrollAnimVariants } from '../../util/animation';
 
 const Contact = () => {
   const { modalOpen, open, close } = useModal();
 
   return (
-    <div name='contact' className={styles.contact}>
-      <header>
+    <motion.div
+      name='contact'
+      className={styles.contact}
+      initial='offscreen'
+      whileInView='onscreen'
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <motion.header variants={scrollAnimVariants}>
         <h1 className={styles.contactHeader}>Say Hi</h1>
-      </header>
-      <footer>
+      </motion.header>
+      <motion.footer variants={scrollAnimVariants}>
         <div className={styles.contactFooter}>
           <p className={styles.contactText}>
             I'm always looking for new opportunities and my inbox is always open
@@ -25,11 +32,11 @@ const Contact = () => {
             Get in Touch
           </motion.button>
         </div>
-      </footer>
+      </motion.footer>
       <AnimatePresence initial={false}>
         {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
