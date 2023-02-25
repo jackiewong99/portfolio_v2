@@ -17,11 +17,11 @@
 }
 
 .footerLink:hover {
-  opacity: 0.6;
+  color: #12714d;
 }
 
 .footerLink:active {
-  opacity: 0.3;
+  color: #1eb178;
 }
 
 .footerText {
