@@ -1,4 +1,4 @@
-import { m, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { GitHub, Twitter, Linkedin } from 'react-feather';
 import styles from './Footer.module.css';
 
