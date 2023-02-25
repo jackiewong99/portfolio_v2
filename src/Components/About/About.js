@@ -4,20 +4,7 @@ import AboutImage from './AboutImage';
 // Styling and animation
 import styles from './About.module.css';
 import { motion } from 'framer-motion';
-
-const aboutVariants = {
-  offscreen: {
-    opacity: 0,
-    y: 40,
-  },
-  onscreen: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import { scrollAnimVariants } from '../../util/animation';
 
 const About = () => {
   return (
@@ -26,12 +13,12 @@ const About = () => {
       className={styles.about}
       initial='offscreen'
       whileInView='onscreen'
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
-      <motion.header variants={aboutVariants}>
+      <motion.header variants={scrollAnimVariants}>
         <h1 className={styles.aboutHeader}>About Me</h1>
       </motion.header>
-      <motion.main variants={aboutVariants}>
+      <motion.main variants={scrollAnimVariants}>
         <div className={styles.container}>
           <AboutImage />
           <AboutDetail />
