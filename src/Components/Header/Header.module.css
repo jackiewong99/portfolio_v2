@@ -18,6 +18,10 @@ h1 {
   margin: 0;
 }
 
+.headerName {
+  margin-top: 20px;
+}
+
 .caption {
   color: var(--secondary-text-color);
   font-size: calc(14px + 0.390625vw);

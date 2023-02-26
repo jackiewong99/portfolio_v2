@@ -32,7 +32,7 @@ const Header = () => {
       initial='initial'
       animate='animate'
     >
-      <motion.div variants={childVariants}>
+      <motion.div variants={childVariants} className={styles.headerName}>
         <p className={styles.caption}>Hello, my name is</p>
         <h1>Jackie Wong.</h1>
       </motion.div>
