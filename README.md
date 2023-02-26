@@ -6,9 +6,9 @@ The second iteration of my [personal website](https://www.wongjackie.com/).
 
 If you fork this repository, please give me credit by either linking my website [wongjackie.com](https://www.wongjackie.com/) or my [github profile](https://github.com/jackiewong99). Thank you and have fun creating your own website!
 
-_Note_: The purpose of this website is to not act like a theme. For any questions about your own code or implementation, please refer to the [React docs](https://beta.reactjs.org/).
+🚨 _Note_: The purpose of this website is to not act like a theme. For any questions about your own code or implementation, please refer to the [React docs](https://beta.reactjs.org/).
 
-## Built and hosted on:
+## 🏠 Built and hosted on:
 
 - [React.js](https://beta.reactjs.org/)
 - [Netlify](https://www.netlify.com/)
