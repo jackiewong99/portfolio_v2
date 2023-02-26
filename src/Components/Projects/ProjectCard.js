@@ -3,6 +3,7 @@ import React from 'react';
 import { Folder, GitHub } from 'react-feather';
 // Styling
 import styles from './Projects.module.css';
+import { motion } from 'framer-motion';
 
 const openInNewTab = url => {
   window.open(url, '_blank', 'noreferrer');
@@ -14,11 +15,13 @@ const ProjectCard = ({
   website,
   github_repo,
   tech_list,
+  variants,
 }) => {
   return (
-    <div
+    <motion.div
       className={styles.cardContainer}
       onClick={() => openInNewTab(website !== '' ? website : github_repo)}
+      variants={variants}
     >
       <header>
         <div className={styles.cardIcons}>
@@ -60,7 +63,7 @@ const ProjectCard = ({
           ))}
         </ul>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 
