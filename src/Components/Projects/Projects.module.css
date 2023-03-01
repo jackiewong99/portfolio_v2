@@ -41,11 +41,7 @@
   padding: 1rem;
   overflow: auto;
   cursor: pointer;
-  transition: all 0.2s ease-out;
-}
-
-.cardContainer:hover {
-  transform: translateY(-5px);
+  /* transition: all 0.2s ease-out; */
 }
 
 .cardIcons {

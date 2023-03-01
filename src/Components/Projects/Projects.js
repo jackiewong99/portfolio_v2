@@ -50,6 +50,10 @@ const Projects = () => {
               key={i}
               initial='offscreen'
               whileInView='onscreen'
+              whileHover={{
+                y: -5,
+                transition: { ease: 'easeIn', duration: 0.2 },
+              }}
               viewport={{ once: true, amount: 0.6 }}
             >
               <ProjectCard
