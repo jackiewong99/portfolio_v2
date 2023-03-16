@@ -6,9 +6,9 @@ The second iteration of my [personal website](https://www.wongjackie.com/).
 
 If you fork this repository, please give me credit by either linking my website [wongjackie.com](https://www.wongjackie.com/) or my [github profile](https://github.com/jackiewong99). Thank you and have fun creating your own website!
 
-🚨 _Note_: The purpose of this website is to not act like a theme. For any questions about your own code or implementation, please refer to the [React docs](https://beta.reactjs.org/).
+:rotating*light: \_Note*: The purpose of this website is to not act like a theme. For any questions about your own code or implementation, please refer to the [React docs](https://beta.reactjs.org/).
 
-## 🏠 Built and hosted on:
+## :house: Built and hosted on:
 
 - [React.js](https://beta.reactjs.org/)
 - [Netlify](https://www.netlify.com/)
@@ -36,7 +36,7 @@ If you fork this repository, please give me credit by either linking my website 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will reload when you make changes.
    You may also see any lint errors in the console.
 
-## 🎉 Build for Production
+## :tada: Build for Production
 
 1. Builds the app for production
 
@@ -50,7 +50,7 @@ If you fork this repository, please give me credit by either linking my website 
 
    See the create-react-app docs section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Learn More
+## :notebook: Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
