@@ -15,15 +15,16 @@ const AboutDetail = () => {
   return (
     <div className={styles.flexChildDetail}>
       <p className={styles.detail}>
-        Hi there! I'm Jackie, a self-taught developer based in Honolulu, HI and
-        a computer science graduate from the University of Hawai'i at Manoa. I
-        am passionate about exploring the possibilities of building cool
-        websites and scalable web apps that deliver a simple user interface and
-        modern user experience, while utilizing current backend technologies
-        when applicable.
+        Hi there! I'm Jackie, a computer science graduate from the University of
+        Hawai'i at Manoa and am currently based in Honolulu, HI. I am passionate
+        about exploring the possibilities of building cool websites and scalable
+        web apps that deliver a simple user interface and modern user
+        experience, while utilizing current backend technologies when
+        applicable.
       </p>
       <p className={styles.detail}>
-        I am currently learning about Next.js, Tailwind CSS, and AWS.
+        I am currently working with React.js, Next.js, Node.js, AWS, and
+        Tailwind CSS.
       </p>
       <p className={styles.detail}>A few technologies I've worked with:</p>
       <ul className={styles.skillsList}>
