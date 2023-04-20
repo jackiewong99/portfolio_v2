@@ -16,7 +16,7 @@ export const projectList = [
   {
     title: 'Portolio',
     description: `The first iteration of my portfolio website that I designed and built in 2020. This website was built with Vue JS.`,
-    website: ``,
+    website: `https://jackiewong99.github.io/portfolio`,
     github_repo: `https://github.com/jackiewong99/portfolio`,
     tech_list: ['Vue.js', 'Node.js', 'CSS'],
   },
