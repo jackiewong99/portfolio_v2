@@ -5,10 +5,6 @@ import { Folder, GitHub } from 'react-feather';
 import styles from './Projects.module.css';
 import { motion } from 'framer-motion';
 
-const openInNewTab = url => {
-  window.open(url, '_blank', 'noreferrer');
-};
-
 const ProjectCard = ({
   title,
   description,
@@ -18,11 +14,7 @@ const ProjectCard = ({
   variants,
 }) => {
   return (
-    <motion.div
-      className={styles.cardContainer}
-      onClick={() => openInNewTab(website !== '' ? website : github_repo)}
-      variants={variants}
-    >
+    <motion.div className={styles.cardContainer} variants={variants}>
       <header>
         <div className={styles.cardIcons}>
           <div>
