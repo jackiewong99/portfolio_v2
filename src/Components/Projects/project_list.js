@@ -1,5 +1,12 @@
 export const projectList = [
   {
+    title: 'Credit Karma Clone',
+    description: `A simple clone of the Credit Karma landing page with design changes and improvements.`,
+    website: `https://credit-karma-clone.vercel.app/`,
+    github_repo: `https://github.com/jackiewong99/credit-karma-clone`,
+    tech_list: ['Next.js', 'Tailwind CSS', 'Vercel'],
+  },
+  {
     title: 'GHG Tracker',
     description: `A web app developed in collaboration with Hawaiian Electric Industries to allow residents of Hawai'i to track their daily greenhouse gas emissions.`,
     website: ``,
