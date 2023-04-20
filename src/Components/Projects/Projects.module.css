@@ -40,8 +40,6 @@
   height: 100%;
   padding: 1rem;
   overflow: auto;
-  cursor: pointer;
-  /* transition: all 0.2s ease-out; */
 }
 
 .cardIcons {
