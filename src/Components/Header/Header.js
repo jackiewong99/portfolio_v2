@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 const parentVariants = {
   initial: {
-    opactiy: 0,
+    opacity: 0,
   },
   animate: {
-    opactiy: 1,
+    opacity: 1,
     transition: { staggerChildren: 0.5, delayChildren: 1.5 },
   },
 };
