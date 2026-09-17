@@ -39,8 +39,9 @@ const Header = () => {
       <motion.div variants={childVariants}>
         <h1>I build projects for the web.</h1>
         <p className={styles.caption}>
-          I am a software developer based in Honolulu, HI specializing in
-          building modern websites, web apps, and all else on the web.
+          I am a Honolulu-based developer combining a computer science
+          background with a strong focus on IT system administration, network
+          engineering, and cybersecurity.
         </p>
       </motion.div>
     </motion.div>

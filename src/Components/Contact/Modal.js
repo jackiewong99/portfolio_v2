@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const dropIn = {
   hidden: {
     y: '-15vh',
-    opactiy: 0,
+    opacity: 0,
   },
   visible: {
     y: '0',
