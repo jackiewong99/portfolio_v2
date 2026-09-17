@@ -4,7 +4,7 @@ export const projectList = [
     description: `A web app that allows users to view their Spotify profile, playlists, artists, and songs.`,
     website: ``,
     github_repo: `https://github.com/jackiewong99/spotify-profile`,
-    tech_list: ['Next.js', 'Tailwind CSS', 'Spotify API', 'NextAuth'],
+    tech_list: ['Next.js', 'Next Auth', 'Spotify API'],
   },
   {
     title: 'Credit Karma Clone',
