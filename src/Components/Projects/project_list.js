@@ -1,5 +1,12 @@
 export const projectList = [
   {
+    title: 'Spotify Profile',
+    description: `A web app that allows users to view their Spotify profile, playlists, artists, and songs.`,
+    website: ``,
+    github_repo: `https://github.com/jackiewong99/spotify-profile`,
+    tech_list: ['Next.js', 'Tailwind CSS', 'Spotify Web API', 'NextAuth'],
+  },
+  {
     title: 'Credit Karma Clone',
     description: `A simple clone of the Credit Karma landing page with design changes and improvements.`,
     website: `https://credit-karma-clone.vercel.app/`,

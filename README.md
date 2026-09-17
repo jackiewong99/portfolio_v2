@@ -1,10 +1,10 @@
 # portfolio (v2)
 
-The second iteration of my [personal website](https://www.wongjackie.com/).
+The second iteration of my [personal website](https://www.jackiezwong.com/).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a39d130b-d143-41cc-a1cc-ad0f96e03499/deploy-status)](https://app.netlify.com/sites/jackiewong/deploys)
 
-If you fork this repository, please give me credit by either linking my website [wongjackie.com](https://www.wongjackie.com/) or my [github profile](https://github.com/jackiewong99). Thank you and have fun creating your own website!
+If you fork this repository, please give me credit by either linking my website [jackiezwong.com](https://www.jackiezwong.com/) or my [github profile](https://github.com/jackiewong99). Thank you and have fun creating your own website!
 
 :rotating*light: \_Note*: The purpose of this website is to not act like a theme. For any questions about your own code or implementation, please refer to the [React docs](https://beta.reactjs.org/).
 
